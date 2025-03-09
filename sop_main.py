@@ -145,7 +145,7 @@ with tab2:
         st.metric("MAPE", f"{metrics['MAPE']:.2f}%", help="Erro percentual médio absoluto")
         st.metric("WMAPE", f"{metrics['WMAPE']:.2f}%", help="Erro percentual ponderado")
         st.metric("BIAS", f"{metrics['BIAS']:.2f}", help="Viés médio das previsões")
-        st.metric("Acurácia", f"{metrics['Forecast_Accuracy']:.2f}%", delta="1.2%")
+        st.metric("Acurácia", f"{metrics['Forecast_Accuracy']:.2f}%")
         
         st.subheader("Distribuição de Erros")
         # Convertendo os intervalos para strings e criando um DataFrame
