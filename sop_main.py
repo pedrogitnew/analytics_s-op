@@ -12,7 +12,7 @@ def generate_data(n=100):
     dates = pd.date_range(start='2023-01-01', periods=n)
     novo_scale = 500 / 3  # σ = 166.67
     actual = np.random.normal(loc=500, scale=novo_scale, size=n).round().astype(int)
-    forecast = actual * np.random.normal(loc=0.9, scale=0.2, size=n) + 100
+    forecast = actual * np.random.normal(loc=0.9, scale=0.2, size=n) + 250
     return pd.DataFrame({
         'Date': dates,
         'Actual': actual.astype(int),
