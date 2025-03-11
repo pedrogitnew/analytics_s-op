@@ -10,7 +10,8 @@ import plotly.express as px
 def generate_data(n=100):
     np.random.seed(12345)
     dates = pd.date_range(start='2023-01-01', periods=n)
-    actual = np.random.normal(loc=500, scale=500, size=n).round()
+    novo_scale = 500 / 3  # σ = 166.67
+    actual = np.random.normal(loc=500, scale=novo_scale, size=n).round().astype(int)
     forecast = actual * np.random.normal(loc=1.2, scale=0.1, size=n)
     return pd.DataFrame({
         'Date': dates,
