@@ -8,7 +8,7 @@ import plotly.express as px
 
 # Função para gerar dados sintéticos
 def generate_data(n=100):
-    np.random.seed(12345)
+    np.random.seed(42)
     dates = pd.date_range(start='2023-01-01', periods=n)
     novo_scale = 500 / 3  # σ = 166.67
     actual = np.random.normal(loc=500, scale=novo_scale, size=n).round().astype(int)
